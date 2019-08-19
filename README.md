@@ -1,6 +1,10 @@
-# AngularCrashTodolist
+# Angular-Todolist
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.1.2.
+
+## Description
+
+This project is a simple todo list built as a simple Angular website as a tutorial to Angular.
 
 ## Development server
 
