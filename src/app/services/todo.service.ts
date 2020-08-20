@@ -13,7 +13,7 @@ const httpOptions = {
   providedIn: 'root'
 })
 export class TodoService {
-  todosUrl = 'http://5f3eb1f313a9640016a69066.mockapi.io/todos';
+  todosUrl = 'https://5f3eb1f313a9640016a69066.mockapi.io/todos';
   todosLimit = 'limit=5';
 
   constructor(private http: HttpClient) { }
