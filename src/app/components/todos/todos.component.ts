@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { TodoService } from '../../services/todo.service';
-import { Todo } from '../../models/Todo';
+import { Todo } from '../../models/todo';
 
 @Component({
   selector: 'app-todos',
@@ -19,7 +19,7 @@ export class TodosComponent implements OnInit {
   }
 
   deleteTodo(todo: Todo) {
-    // show remaining todos after deleting todo 
+    // show remaining todos after deleting todo
     this.todos = this.todos.filter(t => t.id !== todo.id);
     this.todoService.deleteTodo(todo).subscribe();
   }

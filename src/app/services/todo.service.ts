@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { Todo } from '../models/Todo';
+import { Todo } from '../models/todo';
 
 const httpOptions = {
   headers: new HttpHeaders({
@@ -13,13 +13,13 @@ const httpOptions = {
   providedIn: 'root'
 })
 export class TodoService {
-  todosUrl = 'https://jsonplaceholder.typicode.com/todos';
-  todosLimit = '?_limit=5';
+  todosUrl = 'http://5f3eb1f313a9640016a69066.mockapi.io/todos';
+  todosLimit = 'limit=5';
 
   constructor(private http: HttpClient) { }
 
   getTodos(): Observable<Todo[]> {
-    return this.http.get<Todo[]>(`${this.todosUrl}${this.todosLimit}`);
+    return this.http.get<Todo[]>(`${this.todosUrl}?${this.todosLimit}`);
   }
 
   deleteTodo(todo: Todo): Observable<Todo> {
